@@ -1,66 +1,66 @@
 # Login Registration System
 
-Этот проект представляет собой систему регистрации и входа пользователей, реализованную с использованием React для фронтенда и Spring Boot для бэкенда.
+![Project Demo](https://user-images.githubusercontent.com/74038190/212748842-9fcbad5b-6173-4175-8a61-521f3dbb7514.gif)
 
-## 🚀 Технологии
+
+This project is a user registration and login system implemented using React for the front-end and Spring Boot for the backend.
+
+## 🚀 Technologies
 
 - **Frontend**: React, React Router, Axios
 - **Backend**: Spring Boot, Spring Data JPA, Lombok
-- **База данных**: H2 (по умолчанию) или любая другая реляционная БД
+- **Data base**: H2
 
 ## 📂 Структура проекта
 
 ### Backend (Spring Boot)
-- `controller/MyUsersController.java` – контроллер для обработки запросов пользователей
-- `entity/MyUsers.java` – сущность пользователя
-- `repository/MyUsersRepository.java` – интерфейс для работы с БД
-- `requestResponse/LoginRequest.java` – объект запроса для входа
-- `service/MyUsersService.java` – сервис для обработки логики авторизации
-- `LoginRegistrationReactApplication.java` – точка входа Spring Boot приложения
+
+- `controller/MyUsersController.java` – a controller for processing user requests
+- `entity/MyUsers.java` – userEnity
+- `repository/MyUsersRepository.java` – interface for working with databases
+- `requestResponse/LoginRequest.java` – the object of the login request
+- `service/MyUsersService.java` – service for processing authorization logic
 
 ### Frontend (React)
-- `src/components/login/Login.jsx` – компонент страницы входа
-- `src/components/register/Register.jsx` – компонент страницы регистрации
-- `src/App.js` – роутинг приложения
+- `src/components/login/Login.jsx` – the login page component
+- `src/components/register/Register.jsx` – component of the registration page
+- `src/App.js` – application routing
 
-## 🔧 Установка и запуск
+## 🔧 Installation and launch
 
 ### Backend (Spring Boot)
-1. Убедитесь, что у вас установлен **Java 17+** и **Maven**.
-2. Склонируйте репозиторий:
+1. Make sure that you have **Java 17+** and **Maven** installed.
+2. Clone the repository:
    ```sh
    git clone https://github.com/tteemma/ReactAuth.git
    cd ReactAuth
    ```
-3. Запустите бэкенд-приложение:
+3. Launch the backend application:
    ```sh
    mvn spring-boot:run
    ```
 
 ### Frontend (React)
-1. Перейдите в папку `frontend`:
+1. Go to the folder `frontend`:
    ```sh
    cd frontend
    ```
-2. Установите зависимости:
+2. Install the dependencies:
    ```sh
    npm install
    ```
-3. Запустите React-приложение:
+3. Launch the React application:
    ```sh
    npm run dev
    ```
 
-## 🌍 API Эндпоинты
+## 🌍 API Endpoints
 
-- **`POST /api/v1/users/addUser`** – Регистрация нового пользователя
-- **`POST /api/v1/users/loginUser`** – Вход пользователя
+- **`POST /api/v1/users/addUser`** – Register new user
+- **`POST /api/v1/users/loginUser`** – Login user
 
-## 📌 Заметки
-- По умолчанию, фронтенд работает на **http://localhost:5173**.
-- Бэкенд работает на **http://localhost:8080**.
-- Не забудьте настроить CORS, если используете в продакшене.
-
-## 📜 Лицензия
-Этот проект распространяется под лицензией MIT.
-
+## 📌 Notes
+- By default, the frontend runs on **http://localhost:5173 **.
+- The backend works on **http://localhost:8080 **.
+- Don't forget to configure CORS if you use it in production.
+- 
