@@ -1,101 +1,66 @@
-# React & Spring Boot Authentication System
+# Login Registration System
 
-This is a simple user authentication system built with **React** for the frontend and **Spring Boot** for the backend. The application allows users to **register** and **log in** using their email and password.
+Этот проект представляет собой систему регистрации и входа пользователей, реализованную с использованием React для фронтенда и Spring Boot для бэкенда.
 
-## Features
-- User registration
-- User login authentication
-- REST API with Spring Boot
-- Frontend built with React and Axios for API requests
-- Uses JPA for database management
+## 🚀 Технологии
 
-## Technologies Used
-### Backend:
-- **Spring Boot**
-- **Spring Data JPA**
-- **H2 / MySQL Database**
-- **Spring Web**
-- **Lombok**
+- **Frontend**: React, React Router, Axios
+- **Backend**: Spring Boot, Spring Data JPA, Lombok
+- **База данных**: H2 (по умолчанию) или любая другая реляционная БД
 
-### Frontend:
-- **React**
-- **React Router**
-- **Axios**
-- **CSS for styling**
+## 📂 Структура проекта
 
-## Installation & Setup
+### Backend (Spring Boot)
+- `controller/MyUsersController.java` – контроллер для обработки запросов пользователей
+- `entity/MyUsers.java` – сущность пользователя
+- `repository/MyUsersRepository.java` – интерфейс для работы с БД
+- `requestResponse/LoginRequest.java` – объект запроса для входа
+- `service/MyUsersService.java` – сервис для обработки логики авторизации
+- `LoginRegistrationReactApplication.java` – точка входа Spring Boot приложения
 
-### 1. Clone the Repository:
-```sh
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
-2. Backend Setup (Spring Boot)
-Prerequisites:
-Java 17+
-Maven or Gradle
-Steps:
-Open the backend project in your preferred IDE.
-Configure database connection in application.properties (or use H2 for in-memory testing).
-Run the Spring Boot application:
-sh
-Копировать
-Редактировать
-mvn spring-boot:run
-or if using Gradle:
-sh
-Копировать
-Редактировать
-./gradlew bootRun
-The backend will run on http://localhost:8080.
-3. Frontend Setup (React)
-Prerequisites:
-Node.js & npm installed
-Steps:
-Navigate to the React frontend folder:
-sh
-Копировать
-Редактировать
-cd frontend
-Install dependencies:
-sh
-Копировать
-Редактировать
-npm install
-Start the React app:
-sh
-Копировать
-Редактировать
-npm run dev
-The frontend will run on http://localhost:5173.
-API Endpoints
-Method	Endpoint	Description
-POST	/api/v1/users/addUser	Register a new user
-POST	/api/v1/users/loginUser	Login authentication
-Project Structure
-css
-Копировать
-Редактировать
-/backend
-  ├── src/main/java/artem/mironenko/loginregistrationreact
-  │   ├── controller/MyUsersController.java
-  │   ├── entity/MyUsers.java
-  │   ├── repository/MyUsersRepository.java
-  │   ├── requestResponse/LoginRequest.java
-  │   ├── service/MyUsersService.java
-  │   ├── LoginRegistrationReactApplication.java
-  │
-/frontend
-  ├── src
-  │   ├── components
-  │   │   ├── login/Login.jsx
-  │   │   ├── register/Register.jsx
-  │   ├── App.jsx
-  │   ├── main.jsx
-  │
-  ├── public
-  ├── package.json
-  ├── vite.config.js
-Future Improvements
-Implement JWT-based authentication
-Add password encryption (BCrypt)
-Improve UI/UX
+### Frontend (React)
+- `src/components/login/Login.jsx` – компонент страницы входа
+- `src/components/register/Register.jsx` – компонент страницы регистрации
+- `src/App.js` – роутинг приложения
+
+## 🔧 Установка и запуск
+
+### Backend (Spring Boot)
+1. Убедитесь, что у вас установлен **Java 17+** и **Maven**.
+2. Склонируйте репозиторий:
+   ```sh
+   git clone https://github.com/tteemma/ReactAuth.git
+   cd ReactAuth
+   ```
+3. Запустите бэкенд-приложение:
+   ```sh
+   mvn spring-boot:run
+   ```
+
+### Frontend (React)
+1. Перейдите в папку `frontend`:
+   ```sh
+   cd frontend
+   ```
+2. Установите зависимости:
+   ```sh
+   npm install
+   ```
+3. Запустите React-приложение:
+   ```sh
+   npm run dev
+   ```
+
+## 🌍 API Эндпоинты
+
+- **`POST /api/v1/users/addUser`** – Регистрация нового пользователя
+- **`POST /api/v1/users/loginUser`** – Вход пользователя
+
+## 📌 Заметки
+- По умолчанию, фронтенд работает на **http://localhost:5173**.
+- Бэкенд работает на **http://localhost:8080**.
+- Не забудьте настроить CORS, если используете в продакшене.
+
+## 📜 Лицензия
+Этот проект распространяется под лицензией MIT.
+
