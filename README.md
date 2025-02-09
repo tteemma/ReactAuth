@@ -11,7 +11,7 @@ This project is a user registration and login system implemented using React for
 - **Backend**: Spring Boot, Spring Data JPA, Lombok
 - **Data base**: H2
 
-## 📂 Структура проекта
+## 📂 Project structure
 
 ### Backend (Spring Boot)
 
@@ -63,4 +63,4 @@ This project is a user registration and login system implemented using React for
 - By default, the frontend runs on **http://localhost:5173 **.
 - The backend works on **http://localhost:8080 **.
 - Don't forget to configure CORS if you use it in production.
-- 
+
